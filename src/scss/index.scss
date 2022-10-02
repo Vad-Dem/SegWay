@@ -1,0 +1,80 @@
+.header {
+    background-color: #323941;
+    // .header__start
+
+    &__start {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    // .header__menu
+
+    &__menu {
+    }
+
+    // .header__menu-item
+
+    &__menu-item {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.02em;
+        color: #ffffff;
+    }
+
+    // .header__inner
+
+    &__inner {
+    }
+
+    // .header__cart-box
+
+    &__cart-box {
+    }
+
+    // .header__cart-num
+
+    &__cart-num {
+    }
+
+    // .header__inst
+
+    &__inst {
+    }
+
+    // .header__end
+
+    &__end {
+    }
+
+    // .header__logo
+
+    &__logo {
+    }
+
+    // .header__person-box
+
+    &__person-box {
+    }
+
+    // .header__person-img
+
+    &__person-img {
+    }
+
+    // .header__person-textblock
+
+    &__person-textblock {
+    }
+
+    // .header__person-name
+
+    &__person-name {
+    }
+
+    // .header__person-link
+
+    &__person-link {
+    }
+}
