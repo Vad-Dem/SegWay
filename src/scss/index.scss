@@ -1,11 +1,17 @@
 .header {
-    background-color: #323941;
+    // header__start-inner
+
+    &__start-inner {
+        background-color: #323941;
+    }
+
     // .header__start
 
     &__start {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding: 11px 0px;
     }
 
     // .header__menu
@@ -21,26 +27,93 @@
         line-height: 22px;
         letter-spacing: 0.02em;
         color: #ffffff;
+        margin-left: 24px;
+        &:first-child {
+            margin-left: 0;
+        }
+        position: relative;
+        transition: 0.4s ease-out;
+        &::after {
+            display: block;
+            position: absolute;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #009eff;
+            content: "";
+            transition: 0.4s ease-out;
+        }
+        &:hover {
+            color: #009eff;
+            transition: 0.4s ease-out;
+        }
+        &:hover:after,
+        &:focus:after {
+            width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+        }
     }
 
     // .header__inner
 
     &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 
     // .header__cart-box
 
     &__cart-box {
+        position: relative;
+        cursor: pointer;
+        margin-right: 24px;
+        svg {
+            transition: 0.5s;
+            &:hover {
+                fill: #009eff;
+            }
+        }
     }
 
     // .header__cart-num
 
     &__cart-num {
+        position: absolute;
+        top: -6px;
+        right: -6px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #fff;
+        background-color: #009eff;
+        border-radius: 50%;
+        padding: 2px 5px;
     }
 
     // .header__inst
 
     &__inst {
+        margin-right: 24px;
+        transition: 0.5s;
+        &:hover {
+            svg g path {
+                transition: 0.5s;
+                fill: #fbad50;
+            }
+        }
+    }
+
+    // header__phone
+
+    &__phone {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        transition: 0.5s;
+        &:hover {
+            color: #009eff;
+        }
     }
 
     // .header__end
@@ -48,19 +121,32 @@
     &__end {
     }
 
+    //header__endbox
+
+    &__endbox {
+        padding: 18px 0px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
     // .header__logo
 
     &__logo {
+        max-width: 216px;
     }
 
     // .header__person-box
 
     &__person-box {
+        display: flex;
+        align-items: center;
     }
 
     // .header__person-img
 
     &__person-img {
+        margin-right: 13px;
+        max-width: 63px;
     }
 
     // .header__person-textblock
@@ -71,10 +157,67 @@
     // .header__person-name
 
     &__person-name {
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 119.3%;
+        text-transform: uppercase;
+        color: #323941;
+        margin-bottom: 4px;
     }
 
     // .header__person-link
 
     &__person-link {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 119.3%;
+        text-decoration-line: underline;
+        text-transform: lowercase;
+        color: #009eff;
+    }
+}
+
+// footer
+
+.footer {
+    background-color: #32393f;
+    padding: 21px 0px 19px;
+    // .footer__info-box
+
+    &__info-box {
+        display: flex;
+        align-items: center;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 119.3%;
+        color: #ffffff;
+    }
+
+    //footer__inner
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+
+    // .footer__info-phone
+
+    &__info-phone {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 119.3%;
+        color: #ffffff;
+        transition: .5s;
+        &:hover{
+            color: #009eff;
+        }
+    }
+
+    // .footer__info-text
+
+    &__info-text {
+        margin-left: 24px;
     }
 }
